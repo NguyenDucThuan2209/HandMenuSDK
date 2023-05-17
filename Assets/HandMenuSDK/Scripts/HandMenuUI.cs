@@ -66,8 +66,7 @@ namespace HandMenuSDK
         }
 
         public void Pinch()
-        {
-            Debug.LogWarning("Is Pinching!!!");
+        {            
             m_pinchCount++;
             m_isPinching = true;
         }
