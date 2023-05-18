@@ -13,11 +13,6 @@ namespace HandMenuSDK
         {
             GameObject path = new GameObject(pathName);
 
-            for (int i = 0; i < pathPoints.Length; i++)
-            {                
-                pathPoints[i] = new Vector3(pathPoints[i].x, pathPoints[pathPoints.Length - 1].y, pathPoints[i].z);                
-            }
-
             for (int i = 0; i < pathPoints.Length - 1; i++)
             {
                 // Calculate the distance between the current and next path points

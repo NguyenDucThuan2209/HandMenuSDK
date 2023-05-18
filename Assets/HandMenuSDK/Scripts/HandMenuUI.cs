@@ -9,17 +9,16 @@ namespace HandMenuSDK
         private static HandMenuUI m_instance;
         public static HandMenuUI Instance => m_instance;
 
-        [Header("MENU OPPERATOR")]
+        [Header("MENU OPERATOR")]
         [SerializeField] int m_pinchAmount;
         [SerializeField] float m_thresholdTime;
+        [SerializeField] GameObject m_poketableCanvas;
         [SerializeField] SpawnGuideline m_spawnGuideline;
 
-        [Header("MENU PREFERENCES")]
-        [SerializeField] GameObject m_poketableCanvas;
-        [SerializeField] UI.UIPanel m_mainPanel;
-        [SerializeField] UI.UIPanel m_mapPanel;
-        [SerializeField] UI.UIPanel m_checklistPanel;                
-        
+        [Header("TELEPORT OPERATOR")]
+        [SerializeField] Transform m_locationPointer;
+        [SerializeField] Transform[] m_teleportDestinations;
+
         private float m_pinchTime;
         private bool m_isPinching;
         private int m_pinchCount;
@@ -72,33 +71,38 @@ namespace HandMenuSDK
         }
         #endregion
 
-        #region UI Operator
-        private void HideAllUIPanel()
-        {
-            if (m_mainPanel.IsShow) m_mainPanel.HidePanel();
-            if (m_checklistPanel.IsShow) m_checklistPanel.HidePanel();            
-            if (m_mapPanel.IsShow) m_mapPanel.HidePanel();         
-        }
-        public void ShowUIPanel(string panelName)
-        {
-            HideAllUIPanel();
-
-            switch (panelName)
-            {
-                case "Main":
-                    m_mainPanel.ShowPanel();
-                    break;
-                case "Map":
-                    m_mapPanel.ShowPanel();
-                    break;
-                case "Checklist":
-                    m_checklistPanel.ShowPanel();
-                    break;
-            }
-        }
+        #region Map Operator
         public void ShowPath(string pathName, Vector3 targetPoint)
         {                        
             m_spawnGuideline.Spawn(pathName, new Vector3[] { transform.position, Vector3.zero, targetPoint });
+        }
+        public void ShowPath(string pathName)
+        {
+            Vector3 targetPoint = new Vector3();
+
+            for (int i = 0; i < m_teleportDestinations.Length; i++)
+            {
+                if (m_teleportDestinations[i].name == pathName)
+                {
+                    targetPoint = m_teleportDestinations[i].position;
+                    break;
+                }
+            }
+            
+            ShowPath(pathName, targetPoint);
+        }
+        public void TeleportToDestination(string destinationName)
+        {
+            Debug.LogWarning("Teleport to: " + destinationName);
+            for (int i = 0; i < m_teleportDestinations.Length; i++)
+            {
+                if (m_teleportDestinations[i].name == destinationName)
+                {
+                    GetComponentInParent<OVRCameraRig>().transform.position = m_teleportDestinations[i].position;
+                    GetComponentInParent<OVRCameraRig>().transform.rotation = m_teleportDestinations[i].rotation;
+                    break;
+                }
+            }
         }
         #endregion
     }
