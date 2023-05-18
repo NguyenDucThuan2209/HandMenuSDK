@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2781,7 +2781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 362087674}
   m_Layer: 0
-  m_Name: AcientPool
+  m_Name: TowerSquare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2794,14 +2794,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362087673}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -38.17, y: 9.35, z: 40.1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -47.2, y: 1.1, z: 26.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1885720573}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &366682989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,7 +2923,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pyramic
+          m_StringArgument: TowerSquare
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
@@ -3177,7 +3177,7 @@ GameObject:
   - component: {fileID: 388947919}
   - component: {fileID: 388947918}
   m_Layer: 0
-  m_Name: IcescreamHouse
+  m_Name: BusinessApartment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4641,7 +4641,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FerrisWheel
+          m_StringArgument: Lighthouse
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
@@ -5655,15 +5655,15 @@ MonoBehaviour:
   m_thresholdTime: 1
   m_poketableCanvas: {fileID: 1082898548}
   m_spawnGuideline: {fileID: 1885720574}
-  m_locationPointer: {fileID: 0}
+  m_locationPointer: {fileID: 1897373611}
   m_teleportDestinations:
   - {fileID: 1833514069}
   - {fileID: 362087674}
   - {fileID: 1430492079}
   - {fileID: 605316113}
-  - {fileID: 2060471962}
+  - {fileID: 0}
   - {fileID: 692923253}
-  - {fileID: 1036623338}
+  - {fileID: 0}
 --- !u!1 &583313631
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,7 +6083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 605316113}
   m_Layer: 0
-  m_Name: FairyTalesTower
+  m_Name: ResidentApartment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6096,14 +6096,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605316112}
-  m_LocalRotation: {x: -0, y: -0.9999515, z: -0, w: 0.009850322}
-  m_LocalPosition: {x: -23.5, y: 10, z: -49.2}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 3.07, y: 1.1, z: -26.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1885720573}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: -178.871, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &606684532
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,7 +6544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692923253}
   m_Layer: 0
-  m_Name: IcescreamHouse
+  m_Name: BusinessApartment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6557,14 +6557,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692923252}
-  m_LocalRotation: {x: -0, y: 0.9842545, z: -0, w: 0.1767574}
-  m_LocalPosition: {x: 49.55, y: 6, z: 5.09}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 23.6, y: 1.1, z: 46.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1885720573}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 159.638, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &699261838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8112,7 +8112,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: AcientPool
+          m_StringArgument: FrerrisPark
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
@@ -9825,37 +9825,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034426617}
   m_Mesh: {fileID: 5965218850357216741, guid: fbdbbdc7fbd6bbe47bc34b6ae1af87e5, type: 3}
---- !u!1 &1036623337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1036623338}
-  m_Layer: 0
-  m_Name: Pyramic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1036623338
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036623337}
-  m_LocalRotation: {x: -0, y: -0.936677, z: -0, w: 0.35019466}
-  m_LocalPosition: {x: 24.79, y: 6, z: 1.33}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1885720573}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: -139.002, z: 0}
 --- !u!1001 &1039892270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10143,7 +10112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1082898549
 Transform:
   m_ObjectHideFlags: 0
@@ -10836,7 +10805,7 @@ GameObject:
   - component: {fileID: 1139176996}
   - component: {fileID: 1139176995}
   m_Layer: 0
-  m_Name: FairyTalesTower
+  m_Name: ResidentApartment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13682,7 +13651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1430492079}
   m_Layer: 0
-  m_Name: FerrisWheel
+  m_Name: FerrisPark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13695,14 +13664,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430492078}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.46, y: 6, z: 28.24}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -34.2, y: 1.1, z: -25.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1885720573}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1433704099
 GameObject:
   m_ObjectHideFlags: 0
@@ -15127,7 +15096,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: AcientPool
+          m_StringArgument: FrerrisPark
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
@@ -16676,7 +16645,7 @@ GameObject:
   - component: {fileID: 1665556005}
   - component: {fileID: 1665556004}
   m_Layer: 0
-  m_Name: FerrisWheel
+  m_Name: Lighthouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17811,7 +17780,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Pyramic
+          m_StringArgument: TowerSquare
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
@@ -18127,7 +18096,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FerrisWheel
+          m_StringArgument: Lighthouse
           m_BoolArgument: 0
         m_CallState: 2
   _whenUnselect:
@@ -18238,7 +18207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1833514069}
   m_Layer: 0
-  m_Name: BalloonTree
+  m_Name: Lighthouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18251,14 +18220,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833514068}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 12.6, y: 6, z: -21.5}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -7.65, y: 1.1, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1885720573}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1835718570
 GameObject:
   m_ObjectHideFlags: 0
@@ -18722,9 +18691,7 @@ Transform:
   - {fileID: 362087674}
   - {fileID: 1430492079}
   - {fileID: 605316113}
-  - {fileID: 2060471962}
   - {fileID: 692923253}
-  - {fileID: 1036623338}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19933,37 +19900,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058170941}
   m_Mesh: {fileID: 5425218167786477067, guid: fbdbbdc7fbd6bbe47bc34b6ae1af87e5, type: 3}
---- !u!1 &2060471961
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2060471962}
-  m_Layer: 0
-  m_Name: BirdHouse
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2060471962
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060471961}
-  m_LocalRotation: {x: -0, y: 0.98121166, z: -0, w: 0.19293462}
-  m_LocalPosition: {x: 53.1, y: 10, z: -43.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1885720573}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 157.752, z: 0}
 --- !u!1 &2092353684
 GameObject:
   m_ObjectHideFlags: 0
@@ -52766,14 +52702,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4125837237121175842}
-  m_LocalRotation: {x: -0.4005104, y: -0.58285224, z: -0.40035403, w: 0.5827447}
-  m_LocalPosition: {x: -0.057200413, y: 0.0319, z: 0}
+  m_LocalRotation: {x: -0.39027837, y: -0.58964634, z: -0.39027837, w: 0.58964634}
+  m_LocalPosition: {x: -0.054998398, y: 0.030566216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1302104776}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -111.015, y: 89.96, z: -179.957}
+  m_LocalEulerAnglesHint: {x: -113, y: 90, z: -180}
 --- !u!4 &3608676083828958781
 Transform:
   m_ObjectHideFlags: 0
