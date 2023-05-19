@@ -9,9 +9,16 @@ namespace HandMenuSDK
         [SerializeField] GameObject m_linePrefab;
         [SerializeField] float m_distance;
 
+        private GameObject m_currentPath;
+
         public void Spawn(string pathName, Vector3[] pathPoints)
         {
             GameObject path = new GameObject(pathName);
+
+            for (int i = 0; i < pathPoints.Length; i++)
+            {
+                pathPoints[i].y = 0;
+            }
 
             for (int i = 0; i < pathPoints.Length - 1; i++)
             {
@@ -30,13 +37,24 @@ namespace HandMenuSDK
                     // Calculate the position between the current and next path point
                     Vector3 position = Vector3.Lerp(pathPoints[i], pathPoints[i + 1], j * step);
 
+                    // Calculate the direction from the current and next path point
+                    Vector3 direction = Vector3.Normalize(pathPoints[i + 1] - pathPoints[i]);
+
                     // Instantiate a new sphere at the interpolated position
-                    GameObject sphere = Instantiate(m_linePrefab, position, Quaternion.identity, path.transform);
+                    GameObject line = Instantiate(m_linePrefab, position, Quaternion.identity, path.transform);
 
                     // Set the sphere's name for easy identification
-                    sphere.name = "Line " + ((i * numberOfSpheres) + j);
+                    line.name = "Line " + ((i * numberOfSpheres) + j);
+
+                    // Rotate the direction of the line 
+                    line.transform.forward = direction;                    
                 }
             }
+
+            // Replace old path
+            if (m_currentPath != null)
+                Destroy(m_currentPath);
+            m_currentPath = path;
         }
     }
 }

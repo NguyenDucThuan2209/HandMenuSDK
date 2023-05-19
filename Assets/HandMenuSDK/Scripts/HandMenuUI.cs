@@ -12,6 +12,10 @@ namespace HandMenuSDK
         [Header("MENU OPERATOR")]
         [SerializeField] int m_pinchAmount;
         [SerializeField] float m_thresholdTime;
+
+        [Header("MINIMAP OPERATOR")]
+        [SerializeField] float m_hologramSpeed;
+        [SerializeField] MeshRenderer m_hologramMesh;
         [SerializeField] GameObject m_poketableCanvas;
         [SerializeField] SpawnGuideline m_spawnGuideline;
 
@@ -39,6 +43,18 @@ namespace HandMenuSDK
         }
 
         #region Pinch Operator
+        private IEnumerator IE_ShowMinimap(float speed = 1)
+        {
+            float t = 1;            
+            while (t > 0)
+            {
+                m_hologramMesh.material.SetFloat("_AlphaThreshold", t);
+                t -= Time.deltaTime * speed;
+                yield return null;
+            }            
+            m_poketableCanvas.SetActive(true);
+            ResetPinch();
+        }
         private void CheckForPinch()
         {
             if (m_isPinching)
@@ -51,14 +67,24 @@ namespace HandMenuSDK
                 }
                 else
                 {
-                    m_poketableCanvas.SetActive(!m_poketableCanvas.activeSelf);
-                    ResetPinch();
+                    if (m_poketableCanvas.activeSelf)
+                    {
+                        m_poketableCanvas.SetActive(false);
+                        ResetPinch();
+                    }
+                    else
+                    {
+                        m_hologramMesh.gameObject.SetActive(true);
+                        StartCoroutine(IE_ShowMinimap(m_hologramSpeed));
+                    }                    
                 }
             }
         }
-
         private void ResetPinch()
         {
+            StopAllCoroutines();
+            m_hologramMesh.gameObject.SetActive(false);
+
             m_isPinching = false;
             m_pinchCount = 0;
             m_pinchTime = 0;
@@ -74,7 +100,7 @@ namespace HandMenuSDK
         #region Map Operator
         public void ShowPath(string pathName, Vector3 targetPoint)
         {                        
-            m_spawnGuideline.Spawn(pathName, new Vector3[] { transform.position, Vector3.zero, targetPoint });
+            m_spawnGuideline.Spawn(pathName, new Vector3[] { transform.position, targetPoint });
         }
         public void ShowPath(string pathName)
         {
@@ -92,8 +118,7 @@ namespace HandMenuSDK
             ShowPath(pathName, targetPoint);
         }
         public void TeleportToDestination(string destinationName)
-        {
-            Debug.LogWarning("Teleport to: " + destinationName);
+        {            
             for (int i = 0; i < m_teleportDestinations.Length; i++)
             {
                 if (m_teleportDestinations[i].name == destinationName)
